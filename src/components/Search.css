@@ -1,0 +1,34 @@
+.form-control-override {
+  padding: 0.55rem 0.75rem;
+  background-color: #edf6f9;
+  border: #edf6f9;
+}
+
+.button-override {
+  background: #073b4c;
+  border: #073b4c80;
+  padding: 0.55rem 0.75rem;
+}
+
+.button-override:hover {
+  background-color: #073b4c80;
+  border: #073b4c80;
+}
+
+.button-override:active {
+  background-color: #073b4c80;
+  border: #073b4c80;
+}
+
+.weather-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.weather-app {
+  padding: 40px;
+  box-shadow: 0px 12px 28px -8px rgba(70, 107, 203, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
