@@ -42,3 +42,9 @@ li::first-letter {
   line-height: 1;
   font-weight: 400;
 }
+
+.units {
+  font-weight: 400;
+  position: relative;
+  top: -32px;
+}

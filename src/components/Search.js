@@ -14,6 +14,7 @@ export default function Search () {
               aria-label="Search"
               id="city-input"
               autoComplete="off"
+              autoFocus="on"
             />
           </div>
           <div className="col-3">

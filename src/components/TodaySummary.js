@@ -3,7 +3,7 @@ import './TodaySummary.css'
 import TodayDetails from "./TodayDetails";
 import TodayTemp from "./TodayTemp";
 
-export default function TodaySummary () {
+export default function TodaySummary (props) {
   return (
 <div className="TodaySummary row">
       <TodayDetails
