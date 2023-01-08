@@ -7,12 +7,13 @@ export default function TodaySummary (props) {
   return (
 <div className="TodaySummary row">
       <TodayDetails
-        location="Sydney"
+      data={props.temperature}
+        location={props.data.city}
         date="Saturday"
         time="15.10"
-        description="Sunny and clear"
-        humidity={20}
-        wind={15}
+        description={props.data.description}
+        humidity={props.data.humidity}
+        wind={props.data.wind}
       />
       <TodayTemp
         iconUrl="http://openweathermap.org/img/wn/02d@2x.png"
