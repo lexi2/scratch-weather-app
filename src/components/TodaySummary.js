@@ -1,5 +1,6 @@
 import React from "react";
 import './TodaySummary.css'
+import PrettyDate from "./PrettyDate";
 
 export default function TodaySummary (props) {
   return (
@@ -8,16 +9,14 @@ export default function TodaySummary (props) {
         <h1>{props.data.city}</h1>
         <ul>
           <li>
-            <span></span>{" "}
-            <span>
-            {props.date}, {props.time}, {props.data.description}
-            </span>{" "}
+            <PrettyDate date={props.data.date}/>
+          </li>
+          <li>{props.data.description}</li>
+          <li>
+            Humidity: {props.data.humidity}%
           </li>
           <li>
-            Humidity: <span>{props.data.humidity}</span>%
-          </li>
-          <li>
-            Wind: <span>{props.data.wind}</span> km/h
+            Wind:{props.data.wind} km/h
           </li>
         </ul>
     </div>
