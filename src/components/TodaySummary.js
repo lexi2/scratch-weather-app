@@ -1,6 +1,7 @@
 import React from "react";
 import './TodaySummary.css'
 import PrettyDate from "./PrettyDate";
+import CurrentTemperature from "./CurrentTemperature";
 
 export default function TodaySummary (props) {
   return (
@@ -25,10 +26,7 @@ export default function TodaySummary (props) {
           <div className="current-temperature">
             <img src= {props.data.icon} alt={props.data.description} className="" />
           </div>
-          <div className="current-temperature">
-            <strong>{props.data.temperature}</strong>
-            <span className="units"> °C</span>
-          </div>
+        <CurrentTemperature celsius={props.data.temperature}/>
         </div>
       </div>
     </div>

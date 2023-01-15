@@ -32,8 +32,8 @@ li::first-letter {
 
 .current-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 100px;
+  width: 100px;
 }
 
 .current-temperature strong {

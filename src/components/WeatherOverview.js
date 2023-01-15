@@ -15,7 +15,7 @@ export default function WeatherOverview (props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -63,7 +63,6 @@ export default function WeatherOverview (props) {
           </form>
         <TodaySummary data={weatherData} />
         </div> 
-        <p>{weatherData.city}, {weatherData.temperature}, {weatherData.humidity}, {weatherData.wind}</p>
       </div>
     );
     } else {
