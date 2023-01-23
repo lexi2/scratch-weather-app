@@ -9,7 +9,7 @@ export default function WeatherForecast(props){
 
     useEffect(() => {
     setLoaded(false);
-    }, [props.coordinates]);
+    }, [props.data]);
 
   function handleResponse(response){
     setForecast(response.data.list);
@@ -20,23 +20,26 @@ export default function WeatherForecast(props){
     return (
       <div className="WeatherForecast">
         <div className="row">
+          
             {forecast.map(function (dailyForecast, index) {
-            if (index > 0 && index < 6) {
-              return (
-                <div className="col-2 forecast-day" key={index}>
-                  <WeatherForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
+              const currentDay = new Date(dailyForecast.dt * 1000).getDay();
+              const today = new Date().getDay();
+              if (currentDay !== today) {
+                return (
+                  <div className="col forecast-day" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+                  </div>
+                );
+              }
+
               return null;
-            }
           })}
         </div>
       </div>
     )
   } else {
-    let longtitude = props.coordinates.lon
-    let latitude = props.coordinates.lat
+    let longtitude = props.data.coordinates.lon
+    let latitude = props.data.coordinates.lat
     let apiKey = "96fc9dbf0bd42fe281a341e984ec7160";
     let requestUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longtitude}&appid=${apiKey}&units=metric`;
 

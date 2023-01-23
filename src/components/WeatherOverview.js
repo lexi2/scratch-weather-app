@@ -63,7 +63,7 @@ export default function WeatherOverview (props) {
             </div>
           </form>
         <TodaySummary data={weatherData} />
-        <WeatherForecast  coordinates={weatherData.coordinates}/>
+        <WeatherForecast  data={weatherData}/>
         </div> 
       </div>
     );
