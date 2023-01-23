@@ -31,7 +31,6 @@ export default function WeatherForecast(props){
               return null;
             }
           })}
-            {/* <WeatherForecastDay data={forecast[0]}/> */}
         </div>
       </div>
     )
